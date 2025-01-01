@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=">=dev-haskell/cabal-syntax-3.12.0.0:= <dev-haskell/cabal-syntax-3.13:=
+RDEPEND=">=dev-haskell/cabal-syntax-3.10.1.0:= <dev-haskell/cabal-syntax-3.11:=
 	>=dev-haskell/optparse-applicative-0.14.3.0:= <dev-haskell/optparse-applicative-0.19:=
 	>=dev-haskell/parsec-3.1.13.0:= <dev-haskell/parsec-3.2:=
 	>=dev-lang/ghc-9.0.2:=
@@ -31,4 +31,4 @@ DEPEND="${RDEPEND}
 		dev-haskell/temporary )
 "
 
-CABAL_CORE_LIB_GHC_PV="9.10.1"
+CABAL_CORE_LIB_GHC_PV="9.6.5 9.6.6 9.8.2 9.8.3 9.8.4"
