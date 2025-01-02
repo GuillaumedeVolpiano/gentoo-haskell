@@ -30,5 +30,3 @@ DEPEND="${RDEPEND}
 		dev-haskell/tasty-quickcheck
 		dev-haskell/temporary )
 "
-
-CABAL_CORE_LIB_GHC_PV="9.10.1"
