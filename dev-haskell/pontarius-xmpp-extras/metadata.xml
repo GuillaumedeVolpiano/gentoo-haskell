@@ -6,7 +6,7 @@
 		<name>Gentoo Haskell</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="hackage">markdown</remote-id>
-		<remote-id type="github">snoyberg/markdown</remote-id>
+		<remote-id type="hackage">pontarius-xmpp-extras</remote-id>
+		<remote-id type="github">l29ah/pontarius-xmpp-extras</remote-id>
 	</upstream>
 </pkgmetadata>

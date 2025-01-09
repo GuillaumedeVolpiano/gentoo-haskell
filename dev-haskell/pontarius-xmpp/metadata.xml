@@ -5,8 +5,11 @@
 		<email>haskell@gentoo.org</email>
 		<name>Gentoo Haskell</name>
 	</maintainer>
+	<use>
+		<flag name="th">Enable Template Haskell support</flag>
+	</use>
 	<upstream>
-		<remote-id type="hackage">markdown</remote-id>
-		<remote-id type="github">snoyberg/markdown</remote-id>
+		<remote-id type="hackage">pontarius-xmpp</remote-id>
+		<remote-id type="github">l29ah/pontarius-xmpp</remote-id>
 	</upstream>
 </pkgmetadata>
