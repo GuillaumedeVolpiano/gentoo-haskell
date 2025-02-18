@@ -15,6 +15,11 @@ LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 
+CABAL_CHDEPS=(
+	'base     >=4.12.0.0 && <4.21' 'base >=4.12.0.0'
+	'inspection-testing  >=0.2.0.1 && <0.6' 'inspection-testing  >=0.2.0.1'
+	)
+
 RDEPEND=">=dev-haskell/boring-0.2.2:=[profile?] <dev-haskell/boring-0.3:=[profile?]
 	>=dev-haskell/dec-0.0.6:=[profile?] <dev-haskell/dec-0.1:=[profile?]
 	>=dev-haskell/some-1.0.6:=[profile?] <dev-haskell/some-1.1:=[profile?]
@@ -25,6 +30,6 @@ RDEPEND=">=dev-haskell/boring-0.2.2:=[profile?] <dev-haskell/boring-0.3:=[profil
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0
-	test? ( >=dev-haskell/inspection-testing-0.2.0.1 <dev-haskell/inspection-testing-0.6
+	test? ( >=dev-haskell/inspection-testing-0.2.0.1
 		dev-haskell/tagged )
 "
