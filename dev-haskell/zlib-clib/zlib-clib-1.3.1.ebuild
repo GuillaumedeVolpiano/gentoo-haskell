@@ -11,7 +11,7 @@ inherit haskell-cabal
 DESCRIPTION="zlib C library bits"
 HOMEPAGE="https://hackage.haskell.org/package/zlib-clib"
 
-LICENSE="Zlib"	# FIXME: license unknown to cabal. Please pick it manually.
+LICENSE="ZLIB"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 
