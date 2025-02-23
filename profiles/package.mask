@@ -23,6 +23,11 @@ dev-haskell/persistent-relational-record
 dev-haskell/readline
 dev-haskell/shellac-readline
 dev-haskell/shellac-compatline
+# GdeVolpiano <xavier@wheredoibegin.fr>
+# Mask doctest >= 0.23, because tests are strongly bound to ghc-versions. Need
+# to be unmasked based on which ghc version is current with them (at this point,
+# only ghc-9.12)
+>=dev-haskell/doctest-0.23
 
 # hololeap <hololeap@protonmail.com> (2025-02-14)
 #
