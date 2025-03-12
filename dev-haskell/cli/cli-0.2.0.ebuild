@@ -25,3 +25,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.2.1.0
 "
+
+src_prepare(){
+	default
+	sed -e "s@executable example@executable example-cli@" \
+		-i "${S}/${PN}.cabal" \
+		|| die "Could not change ${PN}.cabal to avoid conflict with incline."
+}
