@@ -15,6 +15,7 @@ LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="examples"
+RESTRICT+="test" #requires a running influxdb instance
 
 RDEPEND=">=dev-haskell/aeson-0.7:=[profile?] <dev-haskell/aeson-2.3:=[profile?]
 	<dev-haskell/attoparsec-0.15:=[profile?]
