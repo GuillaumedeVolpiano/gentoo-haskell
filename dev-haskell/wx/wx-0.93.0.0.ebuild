@@ -16,12 +16,11 @@ SRC_URI="https://codeberg.org/wxHaskell/wxHaskell/archive/wxc-1.0.0.2.tar.gz"
 S="${WORKDIR}/wxhaskell/wx"
 
 LICENSE="wxWinLL-3.1"
-SLOT="${WX_GTK_VER}/${PV}"
+SLOT=0
 KEYWORDS="~amd64"
 
 RDEPEND=">=dev-haskell/wxcore-0.93:=[profile?]
 	>=dev-lang/ghc-9.0.2:=
-	!!dev-haskell/wx:3.2
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0

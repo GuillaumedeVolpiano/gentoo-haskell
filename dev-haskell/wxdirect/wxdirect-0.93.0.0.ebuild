@@ -16,13 +16,12 @@ SRC_URI="https://codeberg.org/wxHaskell/wxHaskell/archive/wxc-1.0.0.2.tar.gz"
 S="${WORKDIR}/wxhaskell/wxdirect"
 
 LICENSE="BSD"
-SLOT="${WX_GTK_VER}/${PV}"
+SLOT=0
 KEYWORDS="~amd64"
 
 RDEPEND=">=dev-haskell/parsec-2.1.0:=[profile?] <dev-haskell/parsec-4:=[profile?]
 	dev-haskell/strict:=[profile?]
 	>=dev-lang/ghc-7.4.1:=
-	!!dev-haskell/wxdirect:3.2
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0

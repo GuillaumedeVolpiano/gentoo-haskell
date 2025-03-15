@@ -17,7 +17,7 @@ DESCRIPTION="Examples for the reactive-banana library, using wxHaskell"
 HOMEPAGE="http://wiki.haskell.org/Reactive-banana"
 
 LICENSE="BSD"
-SLOT="${WX_GTK_VER}/${PV}"
+SLOT=0
 KEYWORDS="~amd64"
 IUSE="examples"
 
@@ -28,8 +28,8 @@ GHC_BOOTSTRAP_PACKAGES=(
 RDEPEND=">=dev-haskell/cabal-macosx-0.1:=[profile?] <dev-haskell/cabal-macosx-0.3:=[profile?]
 	>=dev-haskell/reactive-banana-1.1:=[profile?] <dev-haskell/reactive-banana-1.4:=[profile?]
 	>=dev-lang/ghc-9.0.2:=
-	>=dev-haskell/wx-0.93:${WX_GTK_VER}=[profile?]
-	>=dev-haskell/wxcore-0.93:${WX_GTK_VER}=[profile?]
+	>=dev-haskell/wx-0.93:=[profile?]
+	>=dev-haskell/wxcore-0.93:=[profile?]
 	>=dev-haskell/cabal-macosx-0.1 <dev-haskell/cabal-macosx-0.3
 	examples? (
 		>=dev-haskell/executable-path-0.0:=[profile?] <dev-haskell/executable-path-0.1:=[profile?]

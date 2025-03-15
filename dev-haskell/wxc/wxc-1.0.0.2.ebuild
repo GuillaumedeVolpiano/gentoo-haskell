@@ -16,13 +16,13 @@ PATCHES=(
 	)
 
 LICENSE="wxWinLL-3.1"
-SLOT="${WX_GTK_VER}/${PV}"
+SLOT=0
 KEYWORDS="~amd64"
 IUSE="gstreamer"
 
 DEPEND="${RDEPEND}"
-RDEPEND="x11-libs/wxGTK:${WX_GTK_VER}=[X,gstreamer?,opengl]
-	!!dev-haskell/wxc:3.2"
+RDEPEND="x11-libs/wxGTK:${WX_GTK_VER}=[X,gstreamer?,opengl]"
+
 
 src_compile() {
 		sh "${S}"/generate-version-header.sh
