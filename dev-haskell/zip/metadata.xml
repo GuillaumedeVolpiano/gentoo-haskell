@@ -7,8 +7,8 @@
 	</maintainer>
 	<use>
 		<flag name="dev">Turn on development settings.</flag>
-		<flag name="disable-bzip2">Removes dependency on bzip2 C library and hence support for BZip2 entries.</flag>
-		<flag name="disable-zstd">Removes dependency on zstd C library and hence support for Zstandard entries.</flag>
+		<flag name="bzip2">Depend on bzip2 C library and hence support BZip2 entries.</flag>
+		<flag name="zstd">Depend on zstd C library and hence support Zstandard entries.</flag>
 	</use>
 	<upstream>
 		<remote-id type="hackage">zip</remote-id>
