@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/mrkkrp/zip"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
-IUSE="dev disable-bzip2 disable-zstd"
+IUSE="dev +bzip2 +zstd"
 
 RDEPEND=">=dev-haskell/case-insensitive-1.2.0.2:=[profile?] <dev-haskell/case-insensitive-1.3:=[profile?]
 	>=dev-haskell/cereal-0.3:=[profile?] <dev-haskell/cereal-0.6:=[profile?]
@@ -29,8 +29,8 @@ RDEPEND=">=dev-haskell/case-insensitive-1.2.0.2:=[profile?] <dev-haskell/case-in
 	>=dev-haskell/text-0.2:=[profile?] <dev-haskell/text-2.2:=[profile?]
 	dev-haskell/transformers-base:=[profile?]
 	>=dev-lang/ghc-9.0.2:=
-	!disable-bzip2? ( >=dev-haskell/bzlib-conduit-0.3:=[profile?] <dev-haskell/bzlib-conduit-0.4:=[profile?] )
-	!disable-zstd? ( >=dev-haskell/conduit-zstd-0.0.2:=[profile?] <dev-haskell/conduit-zstd-0.1:=[profile?] )
+	bzip2? ( >=dev-haskell/bzlib-conduit-0.3:=[profile?] <dev-haskell/bzlib-conduit-0.4:=[profile?] )
+	zstd? ( >=dev-haskell/conduit-zstd-0.0.2:=[profile?] <dev-haskell/conduit-zstd-0.1:=[profile?] )
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0
@@ -41,8 +41,12 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
+	local bzip2_flag=disable-bzip2 zstd_flag=disable-zstd
+	use bzip2 && bzip2_flag=-disable-bzip2
+	use zstd && zstd_flag=-disable-zstd
+
 	haskell-cabal_src_configure \
 		$(cabal_flag dev dev) \
-		$(cabal_flag disable-bzip2 disable-bzip2) \
-		$(cabal_flag disable-zstd disable-zstd)
+		--flag=${bzip2_flag} \
+		--flag=${zstd_flag}
 }

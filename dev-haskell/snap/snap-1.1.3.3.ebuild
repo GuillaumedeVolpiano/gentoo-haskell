@@ -8,7 +8,7 @@ EAPI=8
 
 CABAL_HACKAGE_REVISION=3
 
-CABAL_FEATURES="lib profile haddock hoogle hscolour test-suite"
+CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
 DESCRIPTION="Top-level package for the Snap Web Framework"
