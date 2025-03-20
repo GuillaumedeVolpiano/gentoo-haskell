@@ -1,3 +1,11 @@
+# GdeVolpiano <xavier@wheredoibegin.fr> (2025-03-20)
+#
+# dev-util/nvidia-cuda-toolkit is not available on musl architectures. Those
+# that need it can unmask it.
+#
+dev-haskell/cuda
+dev-haskell/cufft
+
 # hololeap <hololeap@protonmail.com> (2025-03-17)
 #
 # Various outdated packages which either fail to build, have been deprecated
