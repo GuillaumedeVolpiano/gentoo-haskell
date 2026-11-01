@@ -15,7 +15,7 @@ LICENSE="MIT"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 
-RDEPEND="~dev-haskell/hspec-core-2.11.16:=[profile?]
+RDEPEND="~dev-haskell/hspec-core-2.11.18:=[profile?]
 	>=dev-lang/ghc-9.0.2:=
 "
 DEPEND="${RDEPEND}
