@@ -14,9 +14,12 @@ HOMEPAGE="https://github.com/serokell/tasty-hunit-compat#readme"
 LICENSE="MPL-2.0"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
+CABAL_CHDEPS=(
+	'tasty <1.5' 'tasty'
+)
 
 RDEPEND="<dev-haskell/hunit-1.7:=[profile?]
-	<dev-haskell/tasty-1.5:=[profile?]
+	dev-haskell/tasty:=[profile?]
 	<dev-haskell/tasty-hunit-0.11:=[profile?]
 	>=dev-lang/ghc-9.0.2:=
 "
