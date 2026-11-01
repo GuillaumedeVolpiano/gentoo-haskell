@@ -21,6 +21,7 @@ CABAL_CHDEPS=(
 	'base >= 4.9 && < 4.19' 'base >= 4.9'
 	'template-haskell >= 2.11 && < 2.21' 'template-haskell >= 2.11'
 	'deepseq == 1.4.*' 'deepseq >= 1.4.0'
+	'tasty >= 0.11 && < 1.5' 'tasty >= 0.11'
 	)
 
 RDEPEND=">=dev-haskell/th-compat-0.1.3:=[profile?] <dev-haskell/th-compat-0.2:=[profile?]
@@ -28,7 +29,7 @@ RDEPEND=">=dev-haskell/th-compat-0.1.3:=[profile?] <dev-haskell/th-compat-0.2:=[
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0
-	test? ( >=dev-haskell/tasty-0.11 <dev-haskell/tasty-1.5
+	test? ( >=dev-haskell/tasty-0.11
 		>=dev-haskell/tasty-hunit-0.9 <dev-haskell/tasty-hunit-0.11
 		>=dev-haskell/tasty-travis-0.2 <dev-haskell/tasty-travis-0.3 )
 "
