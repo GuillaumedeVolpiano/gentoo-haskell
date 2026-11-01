@@ -26,6 +26,9 @@ CABAL_CHDEPS=(
 	'optparse-applicative >=0.14.3 && <0.18' 'optparse-applicative >=0.14.3'
 	'bytestring >=0.9 && <0.11' 'bytestring >=0.9'
 	'vector >=0.10 && <0.13' 'vector >=0.10'
+	'containers >=0.4.2 && <0.7' 'containers >=0.4.2'
+	'filepath >=1.4.1.1 && <1.5' 'filepath >=1.4.1.1'
+	'tasty >=1.2.3 && <1.5' 'tasty >=1.2.3'
 )
 
 GHC_BOOTSTRAP_PACKAGES=(
@@ -52,7 +55,7 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/doctest-0.16.2
 		>=dev-haskell/glob-0.10 <dev-haskell/glob-0.11
 		>=dev-haskell/hedgehog-1.0.2
-		>=dev-haskell/tasty-1.2.3 <dev-haskell/tasty-1.5
+		>=dev-haskell/tasty-1.2.3 <dev-haskell/tasty-1.6
 		>=dev-haskell/tasty-discover-4.2.1 <dev-haskell/tasty-discover-4.3
 		>=dev-haskell/tasty-hedgehog-1.0.0.2
 		>=dev-haskell/tasty-hunit-0.10.0.2 <dev-haskell/tasty-hunit-0.11
