@@ -17,6 +17,10 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
 IUSE="examples"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.0-text-less-than-2.1.2.patch
+)
+
 RDEPEND=">=dev-haskell/bimap-0.5:=[profile?] <dev-haskell/bimap-0.6:=[profile?]
 	dev-haskell/config-ini:=[profile?]
 	>=dev-haskell/data-clist-0.1:=[profile?]
@@ -24,7 +28,7 @@ RDEPEND=">=dev-haskell/bimap-0.5:=[profile?] <dev-haskell/bimap-0.6:=[profile?]
 	dev-haskell/microlens-mtl:=[profile?]
 	>=dev-haskell/microlens-platform-0.3.0.0:=[profile?] <dev-haskell/microlens-platform-0.6:=[profile?]
 	dev-haskell/microlens-th:=[profile?]
-	>=dev-haskell/text-2.1.2:=[profile?]
+	>=dev-haskell/text-1.2.5:=[profile?]
 	>=dev-haskell/text-zipper-0.13:=[profile?]
 	dev-haskell/unix-compat:=[profile?]
 	dev-haskell/unordered-containers:=[profile?]
