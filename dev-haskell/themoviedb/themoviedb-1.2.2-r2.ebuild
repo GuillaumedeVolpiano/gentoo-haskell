@@ -18,13 +18,16 @@ IUSE="maintainer"
 
 CABAL_CHDEPS=(
 	'aeson            >=2.0    && <2.2' 'aeson >=2.0'
+	'http-client-tls  >=0.2.2  && <0.4' 'http-client-tls  >=0.2.2'
 	'relude           >=1.0    && <1.2' 'relude >=1.0'
+	'tasty        >=0.10 && <1.5' 'tasty >=0.10'
 	'text             >=0.11   && <2.1' 'text >=0.11'
+	'time             >=1.5    && <1.14' 'time >=1.5'
 	)
 
 RDEPEND=">=dev-haskell/aeson-2.0:=[profile?]
 	>=dev-haskell/http-client-0.4.31:=[profile?] <dev-haskell/http-client-0.8:=[profile?]
-	>=dev-haskell/http-client-tls-0.2.2:=[profile?] <dev-haskell/http-client-tls-0.4:=[profile?]
+	>=dev-haskell/http-client-tls-0.2.2:=[profile?]
 	>=dev-haskell/http-types-0.8:=[profile?] <dev-haskell/http-types-0.13:=[profile?]
 	>=dev-haskell/relude-1.0:=[profile?]
 	>=dev-haskell/text-0.11:=[profile?]
@@ -32,7 +35,7 @@ RDEPEND=">=dev-haskell/aeson-2.0:=[profile?]
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0
-	test? ( >=dev-haskell/tasty-0.10 <dev-haskell/tasty-1.5
+	test? ( >=dev-haskell/tasty-0.10
 		>=dev-haskell/tasty-hunit-0.9 <dev-haskell/tasty-hunit-0.11 )
 "
 
