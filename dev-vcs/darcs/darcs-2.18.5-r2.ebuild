@@ -25,6 +25,8 @@ PATCHES=(
 )
 
 CABAL_CHDEPS=(
+	'http-client-tls   >= 0.3.5 && < 0.4,' 'http-client-tls   >= 0.3.5,'
+	'tls               >= 2.0.6 && < 2.2' 'tls               >= 2.0.6'
 	'zip-archive       >= 0.3 && < 0.5' 'zip-archive       >= 0.3 && < 0.6'
 )
 
@@ -56,7 +58,7 @@ RDEPEND=">=dev-haskell/async-2.0.2:=[profile?] <dev-haskell/async-2.3:=[profile?
 	>=dev-haskell/temporary-1.2.1:=[profile?] <dev-haskell/temporary-1.4:=[profile?]
 	>=dev-haskell/terminal-size-0.3.4:=[profile?] <dev-haskell/terminal-size-0.4:=[profile?]
 	>=dev-haskell/text-1.2.1.3:=[profile?] <dev-haskell/text-2.2:=[profile?]
-	<dev-haskell/tls-2.2:=[profile?]
+	dev-haskell/tls
 	>=dev-haskell/unix-compat-0.6:=[profile?] <dev-haskell/unix-compat-0.8:=[profile?]
 	>=dev-haskell/utf8-string-1:=[profile?] <dev-haskell/utf8-string-1.1:=[profile?]
 	>=dev-haskell/vector-0.11:=[profile?] <dev-haskell/vector-0.14:=[profile?]
