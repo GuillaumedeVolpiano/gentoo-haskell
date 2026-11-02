@@ -21,6 +21,7 @@ CABAL_CHDEPS=(
 	'nothunks >=0.1.4 && <0.3' 'nothunks >=0.1.4'
 	'primitive             ^>=0.8.0.0  || ^>=0.9.0.0' 'primitive >=0.8.0.0'
 	'QuickCheck            ^>=2.14.3   || ^>=2.15    || ^>=2.16.0.0 || ^>=2.17.1.0 || ^>=2.18.0.0' 'QuickCheck            ^>=2.14.3   || ^>=2.15    || ^>=2.16.0.0 || ^>=2.17.1.0 || ^>=2.18.0.0 || ^>=2.19.0.0'
+	'text-iso8601          ^>=0.1.1' 'text-iso8601          >=0.1.1'
 )
 
 RDEPEND=">=dev-haskell/character-ps-0.1:=[profile?] <dev-haskell/character-ps-0.2:=[profile?]
@@ -40,7 +41,7 @@ RDEPEND=">=dev-haskell/character-ps-0.1:=[profile?] <dev-haskell/character-ps-0.
 	>=dev-haskell/strict-0.5:=[profile?] <dev-haskell/strict-0.6:=[profile?]
 	>=dev-haskell/tagged-0.8.7:=[profile?] <dev-haskell/tagged-0.9:=[profile?]
 	>=dev-haskell/text-1.2.3.0:=[profile?] <dev-haskell/text-2.2:=[profile?]
-	>=dev-haskell/text-iso8601-0.1.1:=[profile?] <dev-haskell/text-iso8601-0.2:=[profile?]
+	>=dev-haskell/text-iso8601-0.1.1:=[profile?]
 	>=dev-haskell/text-short-0.1.5:=[profile?] <dev-haskell/text-short-0.2:=[profile?]
 	>=dev-haskell/these-1.2:=[profile?] <dev-haskell/these-1.3:=[profile?]
 	>=dev-haskell/th-abstraction-0.5.0.0:=[profile?] <dev-haskell/th-abstraction-0.8:=[profile?]
