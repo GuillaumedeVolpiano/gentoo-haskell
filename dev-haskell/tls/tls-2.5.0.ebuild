@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/haskell-tls/hs-tls"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 IUSE="devel"
 
 RDEPEND="dev-haskell/base16-bytestring:=[profile?]
