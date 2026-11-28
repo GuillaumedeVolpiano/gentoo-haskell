@@ -16,6 +16,10 @@ HOMEPAGE="https://hackage.haskell.org/package/structured"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
+CABAL_CHDEPS=(
+	'base          >=4.7.0.2  && <4.20' 'base >=4.7.0.2'
+	'containers    >=0.5.5.1  && <0.7' 'containers >=0.5.5.1'
+)
 
 RDEPEND=">=dev-haskell/base16-bytestring-0.1.1.6:=[profile?] <dev-haskell/base16-bytestring-1.1:=[profile?]
 	>=dev-haskell/hashable-1.2:=[profile?] <dev-haskell/hashable-1.5:=[profile?]
@@ -26,16 +30,8 @@ RDEPEND=">=dev-haskell/base16-bytestring-0.1.1.6:=[profile?] <dev-haskell/base16
 	>=dev-haskell/uuid-types-1.0.3:=[profile?] <dev-haskell/uuid-types-1.1:=[profile?]
 	>=dev-haskell/vector-0.10:=[profile?] <dev-haskell/vector-0.14:=[profile?]
 	>=dev-lang/ghc-9.0.2:=
-	|| (
-		( >=dev-haskell/aeson-1.2.1.0 <dev-haskell/aeson-1.6 )
-		( >=dev-haskell/aeson-2.0.0.0 <dev-haskell/aeson-2.3 )
-	)
-	dev-haskell/aeson:=[profile?]
-	|| (
-		( >=dev-haskell/text-1.2.3.0 <dev-haskell/text-1.3 )
-		( >=dev-haskell/text-2.0 <dev-haskell/text-2.2 )
-	)
-	dev-haskell/text:=[profile?]
+	>=dev-haskell/aeson-1.2.1.0:=[profile?] <dev-haskell/aeson-2.3:=[profile?]
+	>=dev-haskell/text-1.2.3.0:=[profile?] <dev-haskell/text-2.2:=[profile?]
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0
