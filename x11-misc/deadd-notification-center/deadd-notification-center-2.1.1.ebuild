@@ -17,6 +17,9 @@ CABAL_FILE="${S}/${PN}.cabal"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
+PATCHES=(
+	"${FILESDIR}"/${P}-glib.patch
+)
 
 RDEPEND="dev-haskell/aeson:=[profile?]
 	dev-haskell/configfile:=[profile?]

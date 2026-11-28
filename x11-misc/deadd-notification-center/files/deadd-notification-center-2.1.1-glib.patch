@@ -1,0 +1,63 @@
+From a09e7fa2be416ff4b2ddb4d62a5554d5703cede5 Mon Sep 17 00:00:00 2001
+From: GuillaumedeVolpiano <xavier@wheredoibegin.fr>
+Date: Sat, 28 Nov 2026 12:03:20 +0100
+Subject: [PATCH] b
+
+--- a/src/NotificationCenter.hs
++++ b/src/NotificationCenter.hs
+@@ -47,7 +47,7 @@ import Control.Monad
+ 
+ import System.Process (spawnCommand, interruptProcessGroupOf, waitForProcess)
+ import System.Locale.Current
+-import System.Posix.Signals (sigUSR1)
++import System.Posix.Signals (sigUSR1, installHandler, Handler(Catch))
+ import System.Posix.Daemonize (serviced, daemonize)
+ import System.Directory (doesFileExist, getXdgDirectory, XdgDirectory(..))
+ 
+@@ -77,7 +77,7 @@ import GI.Gtk
+ import qualified GI.Gtk as Gtk (containerAdd, Window(..), Box(..), Label(..), Button(..), Adjustment(..))
+ 
+ import qualified GI.Gtk as GI (init, main)
+-import GI.GLib (sourceRemove, timeoutAdd, unixSignalAdd)
++import GI.GLib (sourceRemove, timeoutAdd, idleAdd)
+ import GI.GLib.Constants
+ import GI.Gdk.Constants
+ import GI.Gdk.Flags (EventMask(..))
+@@ -416,8 +416,10 @@ main' = do
+     \istate' -> istate' { stNotiState = notiState }
+   createNotiCenter istate config catalog
+ 
+-  unixSignalAdd PRIORITY_HIGH (fromIntegral sigUSR1)
+-    (showNotiCenter istate notiState config)
++  _ <- installHandler sigUSR1
++    (Catch $ void $ idleAdd PRIORITY_HIGH $
++       showNotiCenter istate notiState config >> return False)
++    Nothing
+ 
+   ph <- spawnCommand $ configStartupCommand config
+   waitForProcess ph `finally` interruptProcessGroupOf ph
+--- a/src/NotificationCenter/Notifications/AbstractNotification.hs
++++ b/src/NotificationCenter/Notifications/AbstractNotification.hs
+@@ -19,7 +19,7 @@ import NotificationCenter.Notifications.Action
+   (Action(..), createAction)
+ import TransparentWindow (scale, label, image, box, getObjs, addClass, progressbar)
+ 
+-import Data.Text as Text
++import Data.Text as Text hiding (show)
+ import Data.Int ( Int32 )
+ import Data.Maybe (fromMaybe)
+ 
+--- a/src/NotificationCenter/Notifications/NotificationPopup.hs
++++ b/src/NotificationCenter/Notifications/NotificationPopup.hs
+@@ -28,7 +28,7 @@ import NotificationCenter.Notifications.Notification.Glade (glade)
+ import Control.Lens.TH (makeClassy)
+ import Control.Lens (view, set)
+ 
+-import Data.Text as Text hiding (elem)
++import Data.Text as Text hiding (elem, show)
+ import Data.Word ( Word32 )
+ import Data.Int ( Int32 )
+ import qualified Data.Map as Map ( Map )
+-- 
+2.56.1
+
