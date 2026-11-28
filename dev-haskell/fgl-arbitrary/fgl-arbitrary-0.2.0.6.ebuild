@@ -15,19 +15,16 @@ SRC_URI="https://hackage.haskell.org/package/${P}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
+CABAL_CHDEPS=(
+	'QuickCheck >= 2.3 && < 2.15' 'QuickCheck >= 2.3'
+	'hspec >= 2.1 && < 2.8' 'hspec >= 2.1'
+)
 
 RDEPEND=">=dev-haskell/fgl-5.5.2.0:=[profile?] <dev-haskell/fgl-6:=[profile?]
-	>=dev-haskell/quickcheck-2.3:=[profile?] <dev-haskell/quickcheck-2.15:=[profile?]
+	>=dev-haskell/quickcheck-2.3:=[profile?]
 	>=dev-lang/ghc-7.4.1:=
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.10
 	test? ( >=dev-haskell/hspec-2.1 )
 "
-
-src_prepare() {
-	default
-
-	cabal_chdeps \
-		'hspec >= 2.1 && < 2.8' 'hspec >= 2.1'
-}
