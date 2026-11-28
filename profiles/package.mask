@@ -108,14 +108,6 @@ dev-haskell/gi-javascriptcore
 dev-haskell/cuda
 dev-haskell/cufft
 
-# hololeap <hololeap@protonmail.com> (2025-03-25)
-#
-# stylish-haskell still requires <ghc-lib-parser-9.9. Mask 9.10 until it
-# catches up.
->=dev-haskell/ghc-lib-parser-9.10
->=dev-haskell/ghc-lib-parser-ex-9.10
->=dev-haskell/ghc-syntax-highlighter-0.0.12
-
 # GdeVolpiano <xavier@wheredoibegin.fr> (2025-02-25)
 #
 # dev-haskell/doctest >= 0.23 needs specific versions of ghc to pass tests.
