@@ -19,6 +19,10 @@ KEYWORDS="~amd64"
 PATCHES=(
 	"${FILESDIR}"/${P}-cabal-doctest.patch
 	)
+CABAL_CHDEPS=(
+	'base >=4.10 && <4.20' 'base >=4.10'
+	'QuickCheck >= 2.14 && < 2.15' 'QuickCheck >= 2.14'
+)
 
 RDEPEND=">=dev-lang/ghc-9.0.2:=
 "
