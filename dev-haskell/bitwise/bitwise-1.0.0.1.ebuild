@@ -17,9 +17,14 @@ LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 
+CABAL_CHDEPS=(
+	'base >= 4.7 && < 4.20' 'base >= 4.7'
+	'QuickCheck >= 2.4 && < 2.15' 'QuickCheck >= 2.4'
+)
+
 RDEPEND=">=dev-lang/ghc-9.0.2:=
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-3.4.1.0
-	test? ( >=dev-haskell/quickcheck-2.4 <dev-haskell/quickcheck-2.15 )
+	test? ( >=dev-haskell/quickcheck-2.4 )
 "
